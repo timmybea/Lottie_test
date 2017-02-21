@@ -1,0 +1,14 @@
+Introduction to animations with Lottie: https://www.youtube.com/watch?v=ESjFEaZx7UI&t=1034s
+
+You need Lottie as a cocoapod
+create project in xcode and close
+command line:
+pod init
+open podfile. Add:  pod 'lottie-ios', '~> 1.0'
+pod install
+
+Go to the AfterEffects animation you want to work with.
+Make sure that preferences> General> allow write and network is selected
+Window>extensions>bodymovin (plugin)
+select the file to export as json.
+create destination path and then render.

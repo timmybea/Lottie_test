@@ -62,19 +62,10 @@ class AnimationViewController: UIViewController {
     
     //play animation
     func playButtonAnimation(recognizer: UITapGestureRecognizer) {
-        if menuOn {
-            morphButton?.play(completion: { (success) in
-                self.menuOn = false
-                self.addMorphButton(on: self.menuOn)
-            })
-        } else {
-            morphButton?.play(completion: { (success) in
-                self.menuOn = true
-                self.addMorphButton(on: self.menuOn)
-            })
-
-        }
-        
+        morphButton?.play(completion: { (success) in
+            self.menuOn = !self.menuOn
+            self.addMorphButton(on: self.menuOn)
+        })
     }
     
     override func viewDidLoad() {
